@@ -24,6 +24,7 @@ fn main() {
     use_while();
     iterate_set_with_while(); // use while may cause index out of range.
     iterate_set_with_for(); // the better way to iterate set.
+    for_in_range();
 }
 
 fn return_from_loop() {
@@ -37,7 +38,7 @@ fn return_from_loop() {
         }
     };
 
-    println!("The result in return_from_loop is {}", result);
+    println!("The result in 'return_from_loop' is {}", result);
 }
 
 fn use_while() {
@@ -56,7 +57,7 @@ fn iterate_set_with_while() {
     let mut index = 0;
 
     while index < 5 {
-        println!("the value in iterate_set_with_while is: {}", a[index]);
+        println!("the value in 'iterate_set_with_while' is: {}", a[index]);
 
         index += 1;
     }
@@ -66,6 +67,13 @@ fn iterate_set_with_for() {
     let a = [10, 20, 30, 40, 50];
 
     for element in a {
-        println!("the value in iterate_set_with_for is: {}", element);
+        println!("the value in 'iterate_set_with_for' is: {}", element);
     } 
+}
+
+fn for_in_range() {
+    for number in (1..4).rev() {
+        println!("{}! in 'for_in_range'", number);
+    }
+    println!("LIFTOFF!!! in 'for_in_range'");
 }
