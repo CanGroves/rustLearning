@@ -20,10 +20,11 @@ fn main() {
     }
     println!("End count = {}", count);
 
-    return_from_loop ();
+    return_from_loop();
+    use_while();
 }
 
-fn return_from_loop () {
+fn return_from_loop() {
     let mut counter = 0;
 
     let result = loop {
@@ -35,4 +36,15 @@ fn return_from_loop () {
     };
 
     println!("The result in return_from_loop is {}", result);
+}
+
+fn use_while() {
+    let mut number = 3;
+    while number != 0 {
+        println!("{}!", number);
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!")
 }
