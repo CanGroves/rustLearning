@@ -19,4 +19,20 @@ fn main() {
         count += 1;
     }
     println!("End count = {}", count);
+
+    return_from_loop ();
+}
+
+fn return_from_loop () {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result in return_from_loop is {}", result);
 }
