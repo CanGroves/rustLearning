@@ -1,0 +1,1 @@
+c:\Users\user\Desktop\learnRust\chapter3\exersise2_Fibonacci_of_order_n\target\debug\exersise2_Fibonacci_of_order_n.exe: c:\Users\user\Desktop\learnRust\chapter3\exersise2_Fibonacci_of_order_n\src\main.rs
