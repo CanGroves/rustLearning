@@ -14,6 +14,15 @@ fn main() {
     };
 
     user1.email = String::from("email2@eg.com");
+
+    // using struct update syntax, we can achieve the same effect with less code.
+    let user2 = User {
+        email: String::from("email22@eg.com"),
+        ..user1
+    };
+    // note: after using struct update syntax, fields which do not imp Copy trait (eg. username in this case) will be move to the new struct, thus the old struct can not be used after that
+    
+    
 }
 
 
