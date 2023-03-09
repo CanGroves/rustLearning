@@ -28,13 +28,15 @@
 // }
 
 /* use struct to calc of rect's area more clearly*/
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
 }
 fn main() {
+    let scale = 2;
     let rect1 = Rectangle {
-        width: 30,
+        width: dbg!(30 * scale), // dbg! will return the ownership of the value.
         height: 50,
     };
 
@@ -42,6 +44,10 @@ fn main() {
         "The area of the rectangle is {} suqare pixels.",
         area(&rect1)
     );
+
+    println!("rect1 is {:#?} by println", rect1);
+
+    dbg!(&rect1);
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
