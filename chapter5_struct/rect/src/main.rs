@@ -46,6 +46,10 @@ impl Rectangle {
     fn can_hold(&self, another_rect: &Rectangle) -> bool {
         self.width >= another_rect.width && self.height >= another_rect.height
     }
+
+    fn suqare(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size, }
+    }
 }
 
 fn main() {
@@ -80,6 +84,11 @@ fn main() {
 
     println!("Can rect1 hold rect2? : {}", rect1.can_hold(&rect2));
     println!("Can rect1 hold rect3? : {}", rect1.can_hold(&rect3));
+
+    let sq = Rectangle::suqare(3);
+
+    println!("sq is {:#?} by println", sq);
+
 }
 
 // fn area(rectangle: &Rectangle) -> u32 {
