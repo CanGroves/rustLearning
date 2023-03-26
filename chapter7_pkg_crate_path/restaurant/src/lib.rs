@@ -32,7 +32,7 @@ mod front_of_house {
 }
 
 // Absolute path
-use crate::front_of_house::hosting;
+pub use crate::front_of_house::hosting;
 
 // Relative path
 // use front_of_house::hosting;
