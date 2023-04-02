@@ -15,21 +15,7 @@ mod tests {
     }
 }
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-
-        fn server_order() {}
-
-        fn take_payment() {}
-    }
-}
+mod front_of_house;
 
 // Absolute path
 pub use crate::front_of_house::hosting;
@@ -44,7 +30,7 @@ pub fn eat_at_restaurant() {
     // Relative path
     front_of_house::hosting::add_to_waitlist();
 
-    use crate::front_of_house::hosting; // like line 34, both locations are ok.
+    use crate::front_of_house::hosting; // like line 24, both locations are ok.
 
     hosting::add_to_waitlist();
     hosting::add_to_waitlist();
